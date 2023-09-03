@@ -17,8 +17,7 @@
                     <ng-container *ngFor="let item of navigationList; let i = index;">
                        <li class="text-center fw-bold">{{item.category | titlecase}}</li>
                         <li *ngFor="let subcategory of item.subcategories" [style.cursor]="'pointer'">
-                            <a class="dropdown-item" OpenProducts 
-                            [category]="{id:0, 'category':item.category, 'subcategory':subcategory}">
+                            <a class="dropdown-item">
                                 {{subcategory | titlecase}}
                             </a>
                         </li>
@@ -29,8 +28,8 @@
             </div>
         </div>
         <div class="btn-group  btn-group-lg me-2" role="group">
-             <button type="button" class="btn btn-outline-light">Login</button>
-             <button type="button" class="btn btn-outline-light">Register</button>
+             <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#generalmodal" (click)="openModal('login')">Login</button>
+             <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#generalmodal" (click)="openModal('register')">Register</button>
              <button type="button" class="btn btn-outline-light">Account</button>
              <button type="button" class="btn btn-outline-light" routerLink="/cart">Cart</button>
              <button type="button" class="btn btn-outline-light" routerLink="/orders">Orders</button>
@@ -38,3 +37,24 @@
         </div>
     </div>
 </header>
+
+
+<!-- model -->
+
+<div class="modal fade" id="generalmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="1"> 
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" #modalTitle></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                    <ng-container #container>
+
+                    </ng-container>              
+            </div>
+
+        </div>
+    </div>
+</div>

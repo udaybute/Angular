@@ -14,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OpenProductDirectiveComponent } from './open-product-directive/open-product-directive.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { OpenProductDirectiveComponent } from './open-product-directive/open-pro
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    OpenProductDirectiveComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

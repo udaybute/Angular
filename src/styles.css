@@ -17,3 +17,7 @@ body{
 {
    border-radius: 15px;
 }
+
+.modal-backdrop.fade.show{
+    z-index: 19;
+}
